@@ -1,12 +1,19 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+
 
 const home = () => {
+    const navigate = useNavigate();
+    const routeChange = () => {
+        let path = `/dashboard`;
+        navigate(path);
+    }
   return (
 <div className='h-screen flex justify-center items-center'>
 
-<button className="inline-flex items-center text-indigo-700 border border-indigo-600 py-2 px-6 gap-2 rounded hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:shadow-lg hover:border-transparent">
+<button className="inline-flex items-center text-indigo-700 border border-indigo-600 py-2 px-6 gap-2 rounded hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:shadow-lg hover:border-transparent" onClick={routeChange}>
 
-<span>
+    <span>
         LET'S GO
     </span>
     <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
